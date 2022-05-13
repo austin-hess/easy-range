@@ -1,4 +1,4 @@
-export class NumRangeError extends Error {
+export class EasyRangeError extends Error {
   constructor(message: string) {
     super(`NumRangeError: ${message}`)
   }

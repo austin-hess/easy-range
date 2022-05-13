@@ -1,2 +1,2 @@
-export * from './NumRange'
-export * from './NumRangeError'
+export * from './EasyRange'
+export * from './EasyRangeError'
