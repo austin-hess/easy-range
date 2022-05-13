@@ -1,4 +1,4 @@
-# NumRange
+# EasyRange
 
 Library for defining and comparing numerical ranges
 
