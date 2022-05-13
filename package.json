@@ -1,5 +1,5 @@
 {
-  "name": "numrange",
+  "name": "num-range",
   "version": "1.0.0",
   "description": "Library for defining and comparing numerical ranges",
   "keywords": [
