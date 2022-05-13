@@ -47,9 +47,9 @@ export class NumRange {
       throw new NumRangeError(`Given strRange ${strRange} is invalid. Must match pattern ${STR_RANGE_PATTERN}`)
     }
 
-    let parts = strRange.split('-')
-    let start = parseFloat(parts[0])
-    let end = parseFloat(parts[1])
+    const parts = strRange.split('-')
+    const start = parseFloat(parts[0])
+    const end = parseFloat(parts[1])
 
     return new NumRange(start, end)
   }
