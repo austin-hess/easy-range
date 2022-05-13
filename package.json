@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Library for defining and comparing numerical ranges",
   "keywords": [
+    "easy",
     "range",
     "numerical",
     "compare"
