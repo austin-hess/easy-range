@@ -38,7 +38,7 @@ describe('NumRange class methods', () => {
 
   test('Construct a valid integer range from string representation', async () => {
     let strRange = '1-100'
-    let range = NumRange.fromStrRange(strRange)
+    let range = NumRange.fromString(strRange)
 
     expect(range.start).toBe(1)
     expect(range.end).toBe(100)
@@ -46,7 +46,7 @@ describe('NumRange class methods', () => {
 
   test('Construct a valid float range from string representation', async () => {
     let strRange = '1.567-100.123'
-    let range = NumRange.fromStrRange(strRange)
+    let range = NumRange.fromString(strRange)
 
     expect(range.start).toBe(1.567)
     expect(range.end).toBe(100.123)
@@ -55,7 +55,7 @@ describe('NumRange class methods', () => {
   test('Construct an invalid integer range from string represetation with start value greater than end value', async () => {
     let throwFunc = () => {
       let strRange = '100-1'
-      let range = NumRange.fromStrRange(strRange)
+      let range = NumRange.fromString(strRange)
     }
 
     expect(throwFunc).toThrow()
@@ -64,7 +64,7 @@ describe('NumRange class methods', () => {
   test('Construct range from an invalid string representation', async () => {
     let throwFunc = () => {
       let strRange = 'abc100-1'
-      let range = NumRange.fromStrRange(strRange)
+      let range = NumRange.fromString(strRange)
     }
 
     expect(throwFunc).toThrow()
@@ -92,7 +92,7 @@ describe('NumRange class methods', () => {
   })
 
   test('Check range based on string representation contains number value when within range', async () => {
-    let range = NumRange.fromStrRange('1-100')
+    let range = NumRange.fromString('1-100')
     let val = 50
 
     expect(range.contains(val)).toBe(true)
@@ -120,7 +120,7 @@ describe('NumRange class methods', () => {
   })
 
   test('Check range based on string representation contains number value when within range', async () => {
-    let range = NumRange.fromStrRange('1-100')
+    let range = NumRange.fromString('1-100')
     let val = '50'
 
     expect(range.contains(val)).toBe(true)
@@ -148,7 +148,7 @@ describe('NumRange class methods', () => {
   })
 
   test('Check range based on string representation contains float value when within range', async () => {
-    let range = NumRange.fromStrRange('1-100')
+    let range = NumRange.fromString('1-100')
     let val = 50.567
 
     expect(range.contains(val)).toBe(true)

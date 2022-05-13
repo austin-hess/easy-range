@@ -46,7 +46,7 @@ export class NumRange {
     this.end = end
   }
 
-  static fromStrRange(strRange: string): NumRange {
+  static fromString(strRange: string): NumRange {
     if (!STR_RANGE_PATTERN.test(strRange)) {
       throw new NumRangeError(`Given strRange ${strRange} is invalid. Must match pattern ${STR_RANGE_PATTERN}`)
     }
